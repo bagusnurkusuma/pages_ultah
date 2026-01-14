@@ -17,7 +17,8 @@
       }
 
       body {
-        background: #fff5f7;
+        /* PERUBAHAN: Background ungu muda yang lembut */
+        background: #f3e5f5;
         font-family: "Poppins", sans-serif;
         color: #4a4a4a;
         overflow-x: hidden;
@@ -65,14 +66,16 @@
         background: white;
         padding: 40px;
         border-radius: 30px;
-        box-shadow: 0 15px 45px rgba(255, 182, 193, 0.3);
+        /* PERUBAHAN: Shadow ungu tipis */
+        box-shadow: 0 15px 45px rgba(149, 117, 205, 0.2);
         text-align: center;
         transition: transform 0.5s;
       }
 
       h1 {
         font-family: "Dancing Script", cursive;
-        color: #d63384;
+        /* PERUBAHAN: Warna teks ungu tua */
+        color: #6a1b9a;
         font-size: 3rem;
         margin-bottom: 10px;
       }
@@ -80,12 +83,14 @@
       h2 {
         font-family: "Playfair Display", serif;
         font-style: italic;
-        color: #ff69b4;
+        /* PERUBAHAN: Warna teks ungu medium */
+        color: #8e24aa;
         margin-bottom: 20px;
       }
 
       .age-badge {
-        background: linear-gradient(45deg, #ffb6c1, #ff69b4);
+        /* PERUBAHAN: Gradasi ungu */
+        background: linear-gradient(45deg, #b39ddb, #7e57c2);
         color: white;
         padding: 8px 20px;
         border-radius: 25px;
@@ -105,7 +110,8 @@
         height: 120px;
         margin: 0 auto 25px;
         border-radius: 50%;
-        background: #ffe4e1;
+        /* PERUBAHAN: Background frame ungu sangat muda */
+        background: #f3e5f5;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -117,7 +123,8 @@
         display: inline-block;
         margin-top: 20px;
         padding: 12px 30px;
-        background: #ff69b4;
+        /* PERUBAHAN: Warna tombol ungu */
+        background: #7e57c2;
         color: white;
         text-decoration: none;
         border-radius: 50px;
@@ -128,13 +135,15 @@
       }
 
       .btn-scroll:hover {
-        background: #d63384;
+        /* PERUBAHAN: Hover ungu lebih gelap */
+        background: #5e35b1;
         transform: scale(1.05);
       }
 
       .petal {
         position: absolute;
-        background: #ffc0cb;
+        /* PERUBAHAN: Warna kelopak ungu transparan */
+        background: #d1c4e9;
         border-radius: 150% 0 150% 0;
         opacity: 0.6;
         animation: fall linear infinite;
@@ -191,7 +200,7 @@
 
     <section id="wishes">
       <div class="card">
-        <div class="photo-frame">🌸</div>
+        <div class="photo-frame">💜</div>
         <h2>My Wishes For You</h2>
         <p>
           Semoga di usia 23 ini, semesta selalu berpihak padamu. Semoga semua
@@ -201,10 +210,10 @@
           style="
             font-family: 'Dancing Script';
             font-size: 1.5rem;
-            color: #d63384;
+            color: #6a1b9a;
           "
         >
-          Sehat dan bahagia selalu ya! ✨ ❤️
+          Sehat dan bahagia selalu ya! ✨ 💜
         </div>
       </div>
     </section>
@@ -250,19 +259,16 @@
         }
       }
 
-      // 3. IMPROVEMENT: Pemicu Musik saat tombol ditekan
+      // 3. Pemicu Musik saat tombol ditekan
       startBtn.addEventListener("click", function () {
         playMusic();
-        // Opsional: ganti teks tombol saat diklik
-        this.innerHTML = "Membuka Pesan... ❤️";
+        this.innerHTML = "Membuka Pesan... 💜";
       });
 
-      // Pemicu cadangan: jika user scroll atau klik di mana saja
       window.addEventListener("scroll", playMusic, { once: true });
       window.addEventListener(
         "click",
         (e) => {
-          // Jangan jalankan jika yang diklik adalah tombol musik itu sendiri
           if (!e.target.closest(".music-player")) playMusic();
         },
         { once: true }
